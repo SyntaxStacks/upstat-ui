@@ -1,0 +1,13 @@
+{
+  "name": "upstat",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.2.15",
+    "angular-bootstrap": "*",
+    "lodash": "~2.4.1",
+    "angular-route": "~1.2.15",
+    "angular-resource": "~1.2.15",
+    "angular-cookies": "~1.2.15",
+    "angular-sanitize": "~1.2.15"
+  }
+}
