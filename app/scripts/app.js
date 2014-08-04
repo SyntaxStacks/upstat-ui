@@ -9,7 +9,7 @@ var deps = [
 ];
 
 angular.module('upstatApp', deps)
-    .config(function ($routeProvider, $locationProvider, $httpProvider) {
+    .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/home', {
                 templateUrl: 'views/home/home.html',
@@ -27,8 +27,7 @@ angular.module('upstatApp', deps)
                 templateUrl: 'views/status/status.html',
                 controller: 'StatusCtrl'
             })
-            .when('/teams/:id/statuses'
-              ,{
+            .when('/teams/:id/statuses', {
                 templateUrl: 'views/team/teamStatus.html',
                 controller: 'TeamStatusCtrl'
             })
