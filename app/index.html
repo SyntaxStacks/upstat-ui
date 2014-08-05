@@ -3,16 +3,36 @@
   <head>
     <title>Upstat</title>
     <!-- build:css /template/styles/app.css -->
-    <link rel="stylesheet" href="bower_components/angular-hotkeys/build/hotkeys.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="styles/app.css" />
     <!-- endbuild -->
 </head>
-  <body ng-view>
+  <body>
+    <div id="header" class="row">
+      <div class="btn-group col-md-1 col-md-offset-11" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+          <i class="glyphicon glyphicon-th-list"></i>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/statuses">Status</a></li>
+          <li><a href="/teams">Teams</a></li>
+          <li><a href="users">Users</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Post a Status</a></li>
+        </ul>
+      </div> 
+    </div>
+    <div id="ngApp" ng-view></div>
+    <div></div>
 
     <!-- build:js /template/scripts/plugins.js -->
     <!-- endbuild -->
 
     <!-- build:js /template/scripts/modules.js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
@@ -20,10 +40,8 @@
     <script src="bower_components/momentjs/moment.js"></script>
     <script src="bower_components/html2canvas/build/html2canvas.min.js"></script>
     <script src="bower_components/mousetrap/mousetrap.js"></script>
-    <script src="bower_components/angular-hotkeys/build/hotkeys.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
 
     <!-- build:js /template/scripts/scripts.js -->
     <script src="scripts/app.js"></script>

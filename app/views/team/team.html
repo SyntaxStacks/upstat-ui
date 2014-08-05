@@ -1,11 +1,18 @@
 <rx-page title="'Teams'" subtitle="'List of all teams'">
     <div class="content">
-        <h1>Teams</h1>
-        <p>
-            {{ notification }};
-        </p>
-        <p>
-            {{ teams }};
-        </p>
+      <h1>Teams</h1>
+      <p>
+        <alert type="{{notification.type}}" close="closeAlert($index)">{{notification.message}}</alert> 
+      </p>
+      <table class="table table-striped">
+        <thead>
+          <th>Team name</th>
+        </thead> 
+        <tbody>
+          <tr ng-repeat="team in teams">
+            <td>{{team.teamname}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 </rx-page>

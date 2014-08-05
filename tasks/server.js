@@ -5,20 +5,15 @@ module.exports = function (grunt) {
         function(target, watch, open) {
             var commonTasks = [
                 'clean',
-                'jshint',
-                'jscs',
-                'karma:watch',
-                'less',
                 'connect:livereload',
-                'configureProxies:live'
             ];
 
             if (target === 'dist') {
-                return grunt.task.run(['build', 'open', 'configureProxies:live', 'connect:dist:keepalive']);
+                return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
             } else if (target === 'stubbed') {
                 commonTasks.unshift('stubby');
                 commonTasks.pop();
-                commonTasks.push('configureProxies:mocked');
+                // commonTasks.push('configureProxies:mocked');
                 if (watch === 'watch' || watch === 'true') {
                     commonTasks.push('watch');
                 }

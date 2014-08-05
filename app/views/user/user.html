@@ -1,11 +1,18 @@
 <rx-page title="'User'" subtitle="'User details'">
     <div class="content">
-        <h1>User</h1>
+        <h1>Users</h1>
         <p>
-            {{ notification }};
+          <alert type="{{notification.type}}" close ng-show="{{notification.message != null}}">{{notification.message}}</alert> 
         </p>
-        <p>
-            {{ users }};
-        </p>
+        <table class="table table-striped">
+          <thead>
+            <th>Username</th>
+          </thead> 
+          <tbody>
+            <tr ng-repeat="user in users">
+              <td>{{user.username}}</td>
+            </tr>
+          </tbody>
+        </table>
     </div>
 </rx-page>
