@@ -5,12 +5,7 @@ module.exports = function (grunt) {
         function(target, watch, open) {
             var commonTasks = [
                 'clean',
-                // 'jshint',
-                // 'jscs',
-                // 'karma:watch',
-                'less',
                 'connect:livereload',
-                // 'configureProxies:live'
             ];
 
             if (target === 'dist') {

@@ -2,6 +2,7 @@
 var deps = [
     'ngRoute',
     'ngResource',
+    'ui.bootstrap',
     'homeSvcs',
     'teamSvcs',
     'userSvcs',
